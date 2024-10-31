@@ -1,0 +1,220 @@
+/* src/App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background for contrast */
+  color: #ffffff; /* White text for readability */
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #1e1e1e; /* Slightly lighter background */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+h1 {
+  color: #00FF00; /* Green text color */
+  margin-bottom: 20px;
+  font-size: 3rem; /* Increased font size */
+  text-shadow:
+          0 0 5px rgba(0, 255, 0, 0.6), /* Light green glow */
+          0 0 10px rgba(0, 255, 0, 0.5), /* Medium green glow */
+          0 0 15px rgba(0, 255, 0, 0.4), /* Strong green glow */
+          0 0 20px rgba(0, 255, 0, 0.3); /* Faint green glow */
+  animation: pulse 1.5s infinite alternate; /* Pulsing effect */
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05); /* Scale effect for pulsing */
+  }
+}
+
+.mood-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Increased gap for buttons */
+  margin-bottom: 20px;
+}
+
+/* Default mood button styles */
+.mood-button {
+  background-color: #4A90E2; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px; /* Increased padding */
+  font-size: 18px; /* Larger font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animation effects */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.mood-button:hover {
+  background-color: #357ABD; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Hacking button styles with lightning effect */
+.hacking-button {
+  position: relative;
+  padding: 12px 25px; /* Consistent padding */
+  font-size: 18px; /* Consistent font size */
+  color: white; /* Text color */
+  background-color: black; /* Black background */
+  border: none; /* No border */
+  border-radius: 5px; /* Slightly rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  cursor: pointer; /* Pointer on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow */
+  transition: transform 0.2s ease; /* Animation on hover */
+}
+
+.hacking-button:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.hacking-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"%3E%3Cpath fill="%2300BFFF" d="M20 0 L30 40 L15 25 L40 25 L25 65 L45 40 L25 65 L60 50 L40 80 L70 40 L50 60 L80 20 L40 20 L60 0 L40 0 L20 0 Z" /%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-size: 100% 100%; /* Adjust size of the lightning */
+  opacity: 0.6; /* Opacity for background */
+  z-index: 0; /* Send it to the back */
+}
+
+.hacking-button:hover:before {
+  animation: lightning 0.3s ease forwards; /* Lightning animation */
+}
+
+@keyframes lightning {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; } /* Brightness during strike */
+  100% { opacity: 0.6; }
+}
+
+.playlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Styles for song cards */
+/* src/App.css */
+
+/* Previous styles remain unchanged */
+
+/* src/App.css */
+
+/* Previous styles remain unchanged */
+
+.song {
+  background: #1e1e1e; /* Dark gray background for all song cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* Soft shadow for depth */
+  margin: 15px; /* Increased margin for spacing */
+  padding: 20px; /* More padding for layout */
+  width: 220px; /* Fixed width */
+  text-align: left; /* Left-aligned text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation for hover */
+  position: relative; /* Allows for shadow effect */
+  overflow: hidden; /* Hides overflow */
+}
+
+/* Individual card variations */
+.song:nth-child(1) {
+  background: linear-gradient(135deg, #00FF00, #000000); /* Green to black gradient */
+}
+
+.song:nth-child(2) {
+  background: linear-gradient(135deg, #4A90E2, #000000); /* Blue to black gradient */
+}
+
+.song:nth-child(3) {
+  background: linear-gradient(135deg, #FF4500, #000000); /* Orange to black gradient */
+}
+
+.song:nth-child(4) {
+  background: linear-gradient(135deg, #FFD700, #000000); /* Gold to black gradient */
+}
+
+.song:nth-child(5) {
+  background: linear-gradient(135deg, #8A2BE2, #000000); /* BlueViolet to black gradient */
+}
+
+.song:nth-child(6) {
+  background: linear-gradient(135deg, #FF69B4, #000000); /* HotPink to black gradient */
+}
+
+.song:nth-child(7) {
+  background: linear-gradient(135deg, #FF8C00, #000000); /* DarkOrange to black gradient */
+}
+
+.song:nth-child(8) {
+  background: linear-gradient(135deg, #32CD32, #000000); /* LimeGreen to black gradient */
+}
+
+.song:nth-child(9) {
+  background: linear-gradient(135deg, #DC143C, #000000); /* Crimson to black gradient */
+}
+
+.song:nth-child(10) {
+  background: linear-gradient(135deg, #00BFFF, #000000); /* DeepSkyBlue to black gradient */
+}
+
+.song:hover {
+  transform: scale(1.05) rotate(2deg); /* Slight scale and rotation on hover */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(0, 255, 0, 0.5); /* Glowing shadow on hover */
+}
+
+.song img {
+  border-radius: 10px; /* Rounded corners for images */
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.song img:hover {
+  transform: scale(1.1); /* Slight zoom effect on image hover */
+}
+
+.song h3 {
+  font-size: 20px; /* Slightly larger title */
+  margin: 10px 0 5px;
+  color: #E0E0E0; /* Light gray for song title */
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.6); /* Green glow effect */
+}
+
+.song p {
+  font-size: 14px; /* Consistent font size for artist */
+  color: #B0B0B0; /* Light gray for artist name */
+}
+
+.song a {
+  text-decoration: none; /* No underline */
+  color: #00FF00; /* Green color for links */
+  font-weight: bold; /* Bold text for links */
+  display: inline-block; /* Block context for margin */
+  margin-top: 10px; /* Margin above the link */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.song a:hover {
+  color: #4A90E2; /* Change link color on hover */
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Add glow on hover */
+}
